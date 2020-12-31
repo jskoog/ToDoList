@@ -131,12 +131,14 @@ export default {
     },
     ourAddButtonWasClicked() {
       const { name, completed } = this.newItem;
+      
+      
       // find the last id in the list
       // save that in a variable and add 1 to it
 
-      const lastObj = this.todoItems.pop();
+      const lastObj = this.ToDoItems.length - 1;
 
-      const lastObjId = lastObj.id;
+      const lastObjId = this.ToDoItems.indexOf(lastObj);
 
       this.todoItems.push({
         id: lastObjId + 1,
